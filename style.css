@@ -1,0 +1,178 @@
+body {
+    font-family: 'Comfortaa', sans-serif;
+    background: #000000 url(img/stars.png);
+}
+.titlee{
+    color:#fff;
+    margin-top: 20px;
+    font-size: 32px;
+    margin-left: 40%;
+    text-shadow: 10px 10px 10px #ebd95f77;
+}
+
+.dropbtn {
+    font-family: 'Comfortaa', sans-serif;
+    width: 220px;
+    height: 70px;
+    font-size: 18px;
+    color: #ffffff;
+    border-radius: 5px;
+    border:none;
+    padding-top:25px;
+    padding-bottom:25px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.btn {
+     background: linear-gradient(0deg, rgba(9, 9, 9, 0.832) 0%, rgba(0, 0, 0, 0.568) 100%);
+     color: #fff;
+    overflow: hidden;
+ }
+.btn:hover {
+     text-decoration: none;
+     color: #fff;
+}
+.btn:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: shiny-btn1 3s ease-in-out infinite;
+ }
+.btn:hover{
+    opacity: .2;
+}   
+@-webkit-keyframes shiny-btn1 {
+          0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+          35% { -webkit-transform: scale(1) rotate(45deg); opacity: 0.4; }
+          75% { -webkit-transform: scale(4) rotate(45deg); opacity: 0.7; }
+          100% { -webkit-transform: scale(40) rotate(45deg); opacity: 0; }
+}
+      
+  /* Контейнер <div> - необходим для размещения выпадающего содержимого */
+.dropdown {
+    left:8%;
+    top: 50px;
+    position: relative;
+    display: inline-block;
+}
+  
+  /* Выпадающее содержимое (скрыто по умолчанию) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    width: 220px;
+}
+
+  /* Ссылки внутри выпадающего списка */
+.dropdown-content a {
+    color: rgb(239, 238, 238);
+    padding-top:25px;
+    padding-bottom: 25px;
+    padding-left:20px;
+    text-decoration: none;
+    display: block;
+}
+  
+  /* Изменение цвета выпадающих ссылок при наведении курсора */
+.dropdown-content a:hover {background-color: #232323;}
+  
+  /* Показать выпадающее меню при наведении курсора */
+.dropdown:hover .dropdown-content {display: block;}
+  
+  /* Изменение цвета фона кнопки раскрывающегося списка при отображении содержимого раскрывающегося списка */
+.dropdown:hover .dropbtn { opacity: .2;}
+.slocale{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+div img:not(.sun img) {
+    animation: turn 15s linear infinite;
+}
+.sun img{
+    width: 145px;
+    animation: turn 70s linear infinite;
+}
+.mercury {
+    width: 100px;
+    height: 100px;
+    animation: orbit 14s linear infinite;
+}
+.mercury img {
+    width: 25px;
+    height: 25px;
+}
+.venus {
+    width: 150px;
+    height: 150px;
+    animation: orbit 16s linear infinite;
+}
+.venus img,
+.earth img {
+    width: 48px;
+    height: 48px;
+}
+.earth {
+    width: 200px;
+    height: 200px;
+    animation: orbit 21s linear infinite;
+}
+.mars {
+    width: 250px;
+    height: 250px;
+    animation: orbit 29s linear infinite;
+}
+.mars img {
+    width: 32px;
+    height: 32px;
+}
+.jupiter{
+    width: 300px;
+    height: 300px;
+    animation: orbit 37s linear infinite;
+}
+.jupiter img,
+.saturn img{
+    width: 55px;
+    height: 55px;
+}
+.saturn{
+    width: 350px;
+    height: 350px;
+    animation: orbit 46s linear infinite; 
+}
+.uran{
+    width: 400px;
+    height: 400px;
+    animation: orbit 50s linear infinite; 
+}
+.uran img{
+    width: 30px;
+    height: 30px;
+}
+@keyframes turn {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+@keyframes orbit {
+    from {
+        transform: rotate(0deg) translateX(100%) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(100%) rotate(-360deg);
+    }
+}
